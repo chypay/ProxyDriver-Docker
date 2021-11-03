@@ -28,9 +28,9 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build :latest
-        run: docker build -t ${GITHUB_REPOSITORY}:latest .
+        run: docker build -t ahdark/proxydriver:latest .
 
       - name: Push to docker hub :latest
         uses: actions-hub/docker@master
         with:
-          args: push ${GITHUB_REPOSITORY}:latest
+          args: push ahdark/proxydriver:latest
